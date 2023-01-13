@@ -7,35 +7,35 @@
    <title>Codeigniter Crud</title>
    <!-- Latest compiled and minified CSS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-   <!-- <div class="container mt-4"> -->
-      <!-- <h1>Codeigniter Crud</h1>
+   <div class="container mt-4">
+      <h1>Codeigniter Crud</h1>
       <hr>
       <div class="d-flex justify-content-end">
          <a href="<?php echo site_url('/addname') ?>" class="btn btn-primary">Add a Name & email</a>
-      </div> -->
+      </div>
       <?php
       if (isset($_SESSION['msg'])) {
          echo $_SESSION['msg'];
       }
-      $curl = curl_init();
+      // $curl = curl_init();
 
-      curl_setopt_array($curl, array(
-         CURLOPT_URL => 'https://dataapi.moc.go.th/fta-usage-statistic?hs_codes=01012900,12030000&import_country_code=TH',
-         CURLOPT_RETURNTRANSFER => true,
-         CURLOPT_ENCODING => '',
-         CURLOPT_MAXREDIRS => 10,
-         CURLOPT_TIMEOUT => 0,
-         CURLOPT_FOLLOWLOCATION => true,
-         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-         CURLOPT_CUSTOMREQUEST => 'GET',
-      ));
+      // curl_setopt_array($curl, array(
+      //    CURLOPT_URL => 'https://dataapi.moc.go.th/fta-usage-statistic?hs_codes=01012900,12030000&import_country_code=TH',
+      //    CURLOPT_RETURNTRANSFER => true,
+      //    CURLOPT_ENCODING => '',
+      //    CURLOPT_MAXREDIRS => 10,
+      //    CURLOPT_TIMEOUT => 0,
+      //    CURLOPT_FOLLOWLOCATION => true,
+      //    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      //    CURLOPT_CUSTOMREQUEST => 'GET',
+      // ));
 
-      $response = curl_exec($curl);
+      // $response = curl_exec($curl);
 
-      curl_close($curl);
-      echo $response;
+      // curl_close($curl);
+      // echo $response;
       ?>
-      <!-- <div class="mt-3">
+      <div class="mt-3">
          <table class="table table-bordered" id="users-list">
             <thead>
                <tr>
@@ -61,8 +61,8 @@
                <?php endif; ?>
             </tbody>
          </table>
-      </div> -->
-   <!-- </div> -->
+      </div>
+   </div>
 
    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
